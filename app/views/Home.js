@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 8.8,
         padding: 20,
         justifyContent: "center",
         alignItems: "center",
@@ -20,13 +20,15 @@ const Home = () => {
         setCount(count + 1);
     }
     return (
-        <View style={styles.container}>
-            <Text style={{color: "white", marginBottom: 30}}>Home</Text>
-            <Button style={{}} color={"#ed1c24"}
+        <>
+            <Header message={"Not Logged In"}/>
+            <View style={styles.container}>
+                <Text style={{flex:1, color: "white"}}>Home</Text>
+                <Text style={{flex:1,fontSize: 20, color: "#ed1c24"}}>Count is {count}</Text>
+            </View>
+            <Button color={"#ed1c24"}
                     onPress={increaseTheCount} title={"Increase"}/>
-            <Text style={{fontSize: 20, color: "#ed1c24", marginTop: 30}}>Count is {count}</Text>
-            <Header message={"Press to Login"}/>
-        </View>
+        </>
     );
 };
 
