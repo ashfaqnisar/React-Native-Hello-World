@@ -6,11 +6,12 @@ export default function App() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        padding:20,
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
       }}
     >
-      <Text>Hello World</Text>
+      <Text>Ashfaq Nisar</Text>
     </View>
   );
 }
