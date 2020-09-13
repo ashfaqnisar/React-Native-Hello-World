@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, View} from "react-native";
+import {Alert, Button, StyleSheet, Text, View} from "react-native";
 import Header from "../components/Header";
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#000000",
-        color:'white'
+        color: 'white'
     }
 })
 
@@ -17,16 +17,20 @@ const Home = () => {
     const [count, setCount] = useState(0);
     const increaseTheCount = () => {
         setCount(count + 1);
+        Alert.alert("Increased the count")
     }
     return (
         <>
-            <Header message={"Not Logged In"}/>
+            <Header message={"Not Loggeds In"}/>
             <View style={styles.container}>
-                <Text style={{flex:1, color: "white"}}>Home</Text>
-                <Text style={{flex:1,fontSize: 20, color: "#ed1c24"}}>Count is {count}</Text>
+                <Text style={{flex: 1, color: "white"}}>Home</Text>
+                <Text style={{flex: 1, fontSize: 20, color: "#ed1c24"}}>Count is {count}</Text>
             </View>
+
             <Button color={"#ed1c24"}
                     onPress={increaseTheCount} title={"Increase"}/>
+
+
         </>
     );
 };
