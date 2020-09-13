@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet} from "react-native";
+import {Button, StyleSheet, Text, View} from "react-native";
 import Header from "../components/Header";
-
 
 const styles = StyleSheet.create({
     container: {
